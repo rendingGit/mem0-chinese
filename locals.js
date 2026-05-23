@@ -394,7 +394,23 @@ var I18N = {
         "RUN": "运行",
         "AGENT": "Agent",
         "APP": "应用",
+        "User": "用户",
+        "Agent": "Agent",
+        "App": "应用",
+        "Run": "运行",
         "Updated On": "更新于",
+
+        // -- 计费/组织切换 --
+        "Billing and usage details are restricted.": "计费与用量详情受限。",
+        "Contact the organization owner below for billing or usage information.": "请联系下方组织所有者获取计费或用量信息。",
+        "Switch Organization": "切换组织",
+
+        // -- 演练场/探索 --
+        "Back to Dashboard": "返回仪表盘",
+        "Hey there!": "你好！",
+        "See mem0 in action:": "查看 Mem0 实际效果：",
+        "Observe memory generation and retrieval as you type": "观察你输入时记忆的生成与检索",
+        "Try Playground": "尝试演练场",
 
         // -- 计费 --
         "Billing and usage": "计费与用量",
@@ -458,6 +474,20 @@ var I18N = {
       },
 
       "regexp": [
+        // 日期格式化 "HH:MM:SS AM/PM, Month DD, YYYY" (e.g. "12:10:55 AM, May 23, 2026")
+        [/^(\d{1,2}):(\d{2}):(\d{2}) (AM|PM), (January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4})$/, function (all, hour, min, sec, ampm, month, day, year) {
+          var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
+          var h = parseInt(hour);
+          if (ampm === "PM" && h < 12) h += 12;
+          if (ampm === "AM" && h === 12) h = 0;
+          var hs = h < 10 ? "0" + h : "" + h;
+          return year + "年" + months[month] + "月" + day + "日 " + hs + ":" + min + ":" + sec;
+        }],
+        // 日期格式化 "D Month YYYY" (e.g. "1 May 2026")
+        [/^(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})$/, function (all, day, month, year) {
+          var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
+          return year + "年" + months[month] + "月" + day + "日";
+        }],
         // 日期格式化 "DD/MM/YYYY" with time (e.g. "3:00 AM, 23/05/2026")
         [/^(\d{1,2}):(\d{2}) (AM|PM), (\d{2})\/(\d{2})\/(\d{4})$/, function (all, hour, min, ampm, day, month, year) {
           var h = parseInt(hour);
