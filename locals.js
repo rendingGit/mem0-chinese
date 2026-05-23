@@ -97,6 +97,13 @@ var I18N = {
         "Refresh": "刷新",
         "Retry": "重试",
         "Search": "搜索",
+        "Search...": "搜索...",
+        "SEARCH": "搜索",
+        "ADD": "添加",
+        "DELETE": "删除",
+        "GET ALL": "获取全部",
+        "All": "全部",
+        "All time": "全部时间",
         "Send": "发送",
         "Update": "更新",
         "Copy": "复制",
@@ -163,6 +170,19 @@ var I18N = {
         "Status": "状态",
         "Role": "角色",
         "Title": "标题",
+
+        // -- 表格/列表 --
+        "Filters": "筛选",
+        "Filter": "筛选",
+        "Time": "时间",
+        "Event": "事件",
+        "Latency": "延迟",
+        "Overview": "概览",
+        "Has Results": "有结果",
+        "pagination": "分页",
+        "Go to previous page": "上一页",
+        "More pages": "更多页",
+        "Go to next page": "下一页",
         "Content": "内容",
         "Message": "消息",
         "Notes": "备注",
@@ -229,7 +249,11 @@ var I18N = {
           if (ampm === "AM" && h === 12) h = 0;
           return h + ":" + min;
         }],
-        // 相对时间
+        // 相对时间: Xh ago, Xm ago
+        [/^(\d+)([hm]) ago$/, function (all, num, unit) {
+          return num + (unit === "h" ? "小时前" : "分钟前");
+        }],
+        // 相对时间: X hours ago, X minutes ago, etc.
         [/^(\d+) (seconds?|minutes?|hours?|days?|weeks?|months?|years?) ago$/, function (all, num, unit) {
           var map = { second: "秒", seconds: "秒", minute: "分钟", minutes: "分钟", hour: "小时", hours: "小时", day: "天", days: "天", week: "周", weeks: "周", month: "个月", months: "个月", year: "年", years: "年" };
           return num + " " + (map[unit] || unit) + "前";
@@ -314,6 +338,10 @@ var I18N = {
         "All Time": "全部时间",
         "30d": "30天",
         "Total Memories": "总记忆数",
+        "User user count": "用户数",
+        "SEARCH retrieved count": "搜索检索数",
+        "remaining add count": "剩余添加次数",
+        "add add count": "添加次数",
         "Retrieval Events": "检索事件",
         "Retrieval": "检索",
         "Add Events": "添加事件",
@@ -413,6 +441,25 @@ var I18N = {
         "Try the Playground": "尝试演练场",
         "Test memory addition and retrieval live before wiring it into your app.": "在接入应用前，实时测试记忆的添加与检索。",
         "Step-by-step guides and references to integrate Mem0 into your stack.": "将 Mem0 集成到技术栈的分步指南与参考。",
+
+        // 集成方式卡片
+        "Agent Harness": "Agent 框架",
+        "Memory across every session": "跨会话记忆",
+        "SDK Integration": "SDK 集成",
+        "Drop into your existing SDK": "嵌入现有 SDK",
+        "Plugin": "插件",
+        "Memory for your workflow": "工作流记忆",
+        "PYTHON": "Python",
+        "NODEJS": "Node.js",
+        "CURL API": "cURL API",
+        "Install the SDK": "安装 SDK",
+        "Get started by installing the Mem0 Python package using pip.": "通过 pip 安装 Mem0 Python 包开始使用。",
+        "Initialize the client": "初始化客户端",
+        "Initialize the Mem0 client with your API key to start making requests": "使用 API 密钥初始化 Mem0 客户端以开始请求。",
+        "Add memory": "添加记忆",
+        "Store conversation history and important information for your users": "为用户存储对话历史与重要信息。",
+        "Retrieve memory": "检索记忆",
+        "Retrieve the complete memory history for a specific user": "检索特定用户的完整记忆历史。",
       },
       "regexp": [],
       "selector": [],
