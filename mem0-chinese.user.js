@@ -8,6 +8,8 @@
 // @author       hermes
 // @match        https://app.mem0.ai/*
 // @require      https://raw.githubusercontent.com/rendingGit/mem0-chinese/master/locals.js
+// @downloadURL  https://raw.githubusercontent.com/rendingGit/mem0-chinese/master/mem0-chinese.user.js
+// @updateURL    https://raw.githubusercontent.com/rendingGit/mem0-chinese/master/mem0-chinese.user.js
 // @grant        GM_getValue
 // @grant        GM_setValue
 // @grant        GM_registerMenuCommand
