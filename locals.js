@@ -242,6 +242,24 @@ var I18N = {
         "Hobby plan usage": "爱好版用量",
         "10K": "1万",
 
+        // -- 平台/产品名 --
+        "OPENCLAW": "OpenClaw",
+        "HERMES AGENT": "Hermes Agent",
+        "CLAUDE CODE": "Claude Code",
+        "CODEX": "Codex",
+        "PROMPT": "提示词",
+        "CLI": "CLI",
+        "PLUGIN": "插件",
+        "MCP": "MCP",
+
+        // -- 插件安装页 --
+        "Copy Installation prompt": "复制安装提示词",
+        "Step": "步骤",
+        "View Docs": "查看文档",
+        "Install the Mem0 plugin for Claude Code:": "为 Claude Code 安装 Mem0 插件：",
+        "Add the plugin from the marketplace": "从市场添加插件",
+        "Install the plugin": "安装插件",
+
         // -- 集成方式卡片（设置向导/任意页面可能展示） --
         "Agent Harness": "Agent 框架",
         "Memory across every session": "跨会话记忆",
@@ -289,6 +307,13 @@ var I18N = {
       },
 
       "regexp": [
+        // 日期格式化 "DD/MM/YYYY" with time (e.g. "3:00 AM, 23/05/2026")
+        [/^(\d{1,2}):(\d{2}) (AM|PM), (\d{2})\/(\d{2})\/(\d{4})$/, function (all, hour, min, ampm, day, month, year) {
+          var h = parseInt(hour);
+          if (ampm === "PM" && h < 12) h += 12;
+          if (ampm === "AM" && h === 12) h = 0;
+          return year + "年" + month + "月" + day + "日 " + h + ":" + min;
+        }],
         // 日期格式化 "Month YYYY" (e.g. "May 2026")
         [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})$/, function (all, month, year) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
