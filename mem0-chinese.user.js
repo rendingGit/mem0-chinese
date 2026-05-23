@@ -2,7 +2,7 @@
 // @name         mem0-chinese
 // @name:zh-CN   Mem0 中文本地化
 // @namespace    https://github.com/rendingGit/mem0-chinese
-// @version      1.0.2
+// @version      1.0.3
 // @description  Chinese localization for Mem0 (app.mem0.ai) — 为 Mem0 平台提供简体中文本地化
 // @description:zh-CN  为 Mem0 AI 记忆平台 (app.mem0.ai) 提供简体中文本地化汉化
 // @author       hermes

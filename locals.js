@@ -226,12 +226,31 @@ var I18N = {
 
         // -- 对话框 --
         "Are you sure?": "确定吗？",
+        "Apply": "应用",
         "Yes": "是",
         "No": "否",
         "OK": "确定",
+
+        // -- 星期 --
+        "Sunday": "星期日",
+        "Monday": "星期一",
+        "Tuesday": "星期二",
+        "Wednesday": "星期三",
+        "Thursday": "星期四",
+        "Friday": "星期五",
+        "Saturday": "星期六",
+
+        // -- 日历 --
+        "Go to previous month": "上个月",
+        "Go to next month": "下个月",
       },
 
       "regexp": [
+        // 日期格式化 "Month YYYY" (e.g. "May 2026")
+        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})$/, function (all, month, year) {
+          var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
+          return year + "年" + months[month] + "月";
+        }],
         // 日期格式化 "DD Month" (e.g. "23 May")
         [/^(\\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/, function (all, day, month) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
