@@ -285,6 +285,157 @@ var I18N = {
         "remaining add count": "剩余添加次数",
         "add add count": "添加次数",
 
+        // -- 分类/记忆详情 --
+        "category add count": "分类添加次数",
+        "Categories": "分类",
+        "Category": "分类",
+        "technology": "技术",
+        "professional details": "专业详情",
+        "Details": "详情",
+        "user preferences": "用户偏好",
+        "User Preferences": "用户偏好",
+        "General": "通用",
+        "Personal": "个人",
+        "Action": "操作",
+        "Actions": "操作",
+        "misc": "其他",
+        "Memory Content": "记忆内容",
+        "Editor content": "编辑器内容",
+        "Add Category": "添加分类",
+        "No custom categories present. Add a category to get started.": "还没有自定义分类，添加一个开始吧。",
+        "Essential Insights": "核心洞察",
+        "Memory Details": "记忆详情",
+        "Source & Updates": "来源与更新",
+        "Technology": "技术",
+        "Professional Details": "专业详情",
+        "Milestones": "里程碑",
+        "No memory data available": "暂无记忆数据",
+        "user user count": "用户数",
+
+        // -- 组织/成员 --
+        "Create New Organization": "创建新组织",
+        "Organization Name": "组织名称",
+        "Organization ID": "组织 ID",
+        "Delete Organization": "删除组织",
+        "Invite Member": "邀请成员",
+        "Member Name": "成员名称",
+        "Seat Type": "席位类型",
+        "Unlimited end users": "无限终端用户",
+
+        // -- 使用场景/引导 --
+        "Multilingual Memory Extraction": "多语言记忆提取",
+        "Memories stored in your input language.": "以你的输入语言存储记忆。",
+        "Memory Decay": "记忆衰减",
+        "Surface memories that are accessed often and let stale ones fade.": "优先展示常用记忆，让过时记忆自然淡出。",
+        "Select Usecase": "选择使用场景",
+        "Select a usecase": "选择使用场景",
+        "Choose Memory Depth": "选择记忆深度",
+        "Specify any additional elements you want to include in your instructions": "指定你想在指令中包含的额外元素",
+        "Specify any elements you want to exclude from your instructions": "指定你想从指令中排除的元素",
+        "Skip to Manual Customization": "跳过，手动自定义",
+        "Generate Instructions": "生成指令",
+        "Memory Expiration Date": "记忆过期日期",
+        "Pick a date": "选择日期",
+        "Delete All Memories": "删除所有记忆",
+        "Community Support": "社区支持",
+
+        // -- API 密钥 --
+        "Manage API Keys": "管理 API 密钥",
+        "Easily create, view, and manage your API keys for seamless integration.": "轻松创建、查看和管理 API 密钥，实现无缝集成。",
+        "Create API Key": "创建 API 密钥",
+        "API keys are now securely hashed and no longer visible. If you didn't save your key, generate a new one and update your integration.": "API 密钥现已安全哈希，不再可见。如未保存密钥，请生成新密钥并更新集成。",
+        "Key Name": "密钥名称",
+        "Created At": "创建时间",
+        "Mem0 Default Key": "Mem0 默认密钥",
+
+        // -- Webhooks --
+        "Manage your project's webhooks to receive notifications for various events.": "管理项目 Webhook 以接收各类事件通知。",
+        "Add New Webhook": "添加新 Webhook",
+        "Events (at least one required)": "事件（至少一个必填）",
+        "No webhooks found.": "未找到 Webhook。",
+
+        // -- 记忆导出 --
+        "Export memories in a structured format using customizable Pydantic schemas.": "使用可自定义的 Pydantic 模式导出结构化记忆。",
+        "Learn more": "了解更多",
+        "Create Export": "创建导出",
+        "Entity": "实体",
+        "Started": "已开始",
+        "Completed": "已完成",
+        "Export Details": "导出详情",
+        "Create Memory Export": "创建记忆导出",
+        "Visual": "可视化",
+        "Raw": "原始",
+        "Entity Filters": "实体筛选",
+        "Add Filter": "添加筛选",
+        "Date Range (Optional)": "日期范围（可选）",
+        "Pydantic Schema": "Pydantic 模式",
+        "Drag bottom edge to resize": "拖拽底部边缘调整大小",
+        "Creating...": "创建中...",
+        "No memory exports found": "未找到记忆导出",
+
+        // -- 项目 --
+        "Create New Project": "创建新项目",
+        "Project Name": "项目名称",
+        "Project ID": "项目 ID",
+        "Project Description": "项目描述",
+        "Danger Zone": "危险区域",
+        "Delete Project": "删除项目",
+
+        // -- 账户/设置 --
+        "First Name": "名",
+        "Last Name": "姓",
+        "Appearance": "外观",
+        "Authorization": "授权",
+        "Logout": "退出登录",
+        "Delete Account": "删除账户",
+
+        // -- 实体/操作类型 --
+        "USER": "用户",
+        "RUN": "运行",
+        "AGENT": "Agent",
+        "APP": "应用",
+        "Updated On": "更新于",
+
+        // -- 计费 --
+        "Billing and usage": "计费与用量",
+        "Includes limited requests and memories to test core memory workflows.": "包含有限请求和记忆，用于测试核心记忆工作流。",
+        "Current Billing:": "当前计费：",
+        "Mem0 Plans": "Mem0 方案",
+        "Current Plan": "当前方案",
+        "Starter Plan": "入门方案",
+        "Growth Plan": "成长方案",
+        "Pro Plan": "专业方案",
+        "Enterprise Plan": "企业方案",
+        "Upgrade to Starter": "升级到入门版",
+        "Upgrade to Growth": "升级到成长版",
+        "Upgrade to Pro": "升级到专业版",
+        "Flexible Pricing": "灵活定价",
+        "Unlimited add requests": "无限添加请求",
+        "Unlimited retrieval requests": "无限检索请求",
+        "On-prem deployment": "本地部署",
+        "Audit Logs": "审计日志",
+        "Custom Integrations": "自定义集成",
+        "Contact Us": "联系我们",
+        "Usage Breakdown": "用量明细",
+        "Hobby Plan": "爱好版",
+        "Add Requests": "添加请求",
+        "% used": "% 已用",
+        "Retrieval Requests": "检索请求",
+        "Private Slack Channel": "私有 Slack 频道",
+        "Advanced Analytics": "高级分析",
+        "10,000 add requests per month": "每月 10,000 次添加请求",
+        "1000 retrieval requests per month": "每月 1,000 次检索请求",
+        "50,000 add requests per month": "每月 50,000 次添加请求",
+        "5000 retrieval requests per month": "每月 5,000 次检索请求",
+        "200,000 add requests per month": "每月 200,000 次添加请求",
+        "20,000 retrieval requests per month": "每月 20,000 次检索请求",
+        "500,000 add requests per month": "每月 500,000 次添加请求",
+        "50,000 retrieval requests per months": "每月 50,000 次检索请求",
+        "Multiple Project Support": "多项目支持",
+        "$19/month": "$19/月",
+        "$79/month": "$79/月",
+        "$249/month": "$249/月",
+
         // -- 对话框 --
         "Are you sure?": "确定吗？",
         "Apply": "应用",
@@ -314,7 +465,16 @@ var I18N = {
           if (ampm === "AM" && h === 12) h = 0;
           return year + "年" + month + "月" + day + "日 " + h + ":" + min;
         }],
-        // 日期格式化 "Month YYYY" (e.g. "May 2026")
+        // 日期格式化 "Month DD, YYYY, HH:MM:SS AM/PM" (e.g. "May 23, 2026, 12:15:08 AM")
+        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4}), (\d{1,2}):(\d{2}):(\d{2}) (AM|PM)$/, function (all, month, day, year, hour, min, sec, ampm) {
+          var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
+          var h = parseInt(hour);
+          if (ampm === "PM" && h < 12) h += 12;
+          if (ampm === "AM" && h === 12) h = 0;
+          var hs = h < 10 ? "0" + h : "" + h;
+          return year + "年" + months[month] + "月" + day + "日 " + hs + ":" + min + ":" + sec;
+        }],
+        // 日期格式化 "D Month YYYY" (e.g. "1 May 2026", "1 Jun 2026")
         [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{4})$/, function (all, month, year) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
           return year + "年" + months[month] + "月";
