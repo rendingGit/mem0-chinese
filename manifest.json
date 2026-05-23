@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "Mem0 中文本地化",
+  "name:zh-CN": "Mem0 中文本地化",
+  "version": "1.0.0",
+  "description": "为 Mem0 AI 记忆平台提供简体中文本地化汉化",
+  "description:zh-CN": "为 Mem0 AI 记忆平台 (app.mem0.ai) 提供简体中文本地化汉化",
+  "author": "hermes",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://app.mem0.ai/*"],
+      "js": ["locals.js", "content.js"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [],
+  "host_permissions": ["https://app.mem0.ai/*"],
+  "homepage_url": "https://github.com/nous-hermes/mem0-chinese"
+}
