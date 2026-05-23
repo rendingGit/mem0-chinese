@@ -509,14 +509,16 @@
     };
 
     if (window.next && window.next.router) {
-      window.next.router.events.on("routeChangeComplete", function () {
-        setTimeout(function () {
-          if (window.location.href !== State.previousURL) {
-            State.previousURL = window.location.href;
-            handleURLChange();
-          }
-        }, 200);
-      });
+      try {
+        window.next.router.events.on("routeChangeComplete", function () {
+          setTimeout(function () {
+            if (window.location.href !== State.previousURL) {
+              State.previousURL = window.location.href;
+              handleURLChange();
+            }
+          }, 200);
+        });
+      } catch (e) {}
     }
   }
 

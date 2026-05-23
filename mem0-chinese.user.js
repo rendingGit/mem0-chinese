@@ -2,7 +2,7 @@
 // @name         mem0-chinese
 // @name:zh-CN   Mem0 中文本地化
 // @namespace    https://github.com/rendingGit/mem0-chinese
-// @version      1.0.4
+// @version      1.0.5
 // @description  Chinese localization for Mem0 (app.mem0.ai) — 为 Mem0 平台提供简体中文本地化
 // @description:zh-CN  为 Mem0 AI 记忆平台 (app.mem0.ai) 提供简体中文本地化汉化
 // @author       hermes
@@ -584,14 +584,16 @@
 
     // Next.js 路由事件（如果有暴露）
     if (window.next && window.next.router) {
-      window.next.router.events.on("routeChangeComplete", function () {
-        setTimeout(function () {
-          if (window.location.href !== State.previousURL) {
-            State.previousURL = window.location.href;
-            handleURLChange();
-          }
-        }, 200);
-      });
+      try {
+        window.next.router.events.on("routeChangeComplete", function () {
+          setTimeout(function () {
+            if (window.location.href !== State.previousURL) {
+              State.previousURL = window.location.href;
+              handleURLChange();
+            }
+          }, 200);
+        });
+      } catch (e) {}
     }
   }
 
