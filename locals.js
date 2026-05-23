@@ -252,12 +252,12 @@ var I18N = {
           return year + "年" + months[month] + "月";
         }],
         // 日期格式化 "DD Month" (e.g. "23 May")
-        [/^(\\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/, function (all, day, month) {
+        [/^(\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/, function (all, day, month) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
           return months[month] + "月" + day + "日";
         }],
         // 日期格式化 "Month DD, YYYY"
-        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\\d{1,2}), (\\d{4})$/, function (all, month, day, year) {
+        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4})$/, function (all, month, day, year) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
           return year + "年" + months[month] + "月" + day + "日";
         }],
