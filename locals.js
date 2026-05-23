@@ -242,6 +242,31 @@ var I18N = {
         "Hobby plan usage": "爱好版用量",
         "10K": "1万",
 
+        // -- 集成方式卡片（设置向导/任意页面可能展示） --
+        "Agent Harness": "Agent 框架",
+        "Memory across every session": "跨会话记忆",
+        "SDK Integration": "SDK 集成",
+        "Drop into your existing SDK": "嵌入现有 SDK",
+        "Plugin": "插件",
+        "Memory for your workflow": "工作流记忆",
+        "PYTHON": "Python",
+        "NODEJS": "Node.js",
+        "CURL API": "cURL API",
+        "Install the SDK": "安装 SDK",
+        "Get started by installing the Mem0 Python package using pip.": "通过 pip 安装 Mem0 Python 包开始使用。",
+        "Initialize the client": "初始化客户端",
+        "Initialize the Mem0 client with your API key to start making requests": "使用 API 密钥初始化 Mem0 客户端以开始请求。",
+        "Add memory": "添加记忆",
+        "Store conversation history and important information for your users": "为用户存储对话历史与重要信息。",
+        "Retrieve memory": "检索记忆",
+        "Retrieve the complete memory history for a specific user": "检索特定用户的完整记忆历史。",
+
+        // -- 面板统计（仪表盘及子页面） --
+        "User user count": "用户数",
+        "SEARCH retrieved count": "搜索检索数",
+        "remaining add count": "剩余添加次数",
+        "add add count": "添加次数",
+
         // -- 对话框 --
         "Are you sure?": "确定吗？",
         "Apply": "应用",
@@ -375,10 +400,6 @@ var I18N = {
         "All Time": "全部时间",
         "30d": "30天",
         "Total Memories": "总记忆数",
-        "User user count": "用户数",
-        "SEARCH retrieved count": "搜索检索数",
-        "remaining add count": "剩余添加次数",
-        "add add count": "添加次数",
         "Retrieval Events": "检索事件",
         "Retrieval": "检索",
         "Add Events": "添加事件",
