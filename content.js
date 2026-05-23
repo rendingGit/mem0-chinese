@@ -71,7 +71,9 @@
 
   // ==================== 初始化当前页面配置 ====================
   function buildPageConfig(pageType) {
-    if (!pageType || !I18N["zh-CN"]) return null;
+    // 即使页面类型未知，也加载 public 词库保证翻译不白屏
+    if (!I18N["zh-CN"]) return null;
+    var effectiveType = pageType || "_fallback";
 
     var zh = I18N["zh-CN"];
     var conf = I18N.conf || {};

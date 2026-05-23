@@ -2,7 +2,7 @@
 // @name         mem0-chinese
 // @name:zh-CN   Mem0 中文本地化
 // @namespace    https://github.com/rendingGit/mem0-chinese
-// @version      1.0.8
+// @version      1.0.9
 // @description  Chinese localization for Mem0 (app.mem0.ai) — 为 Mem0 平台提供简体中文本地化
 // @description:zh-CN  为 Mem0 AI 记忆平台 (app.mem0.ai) 提供简体中文本地化汉化
 // @author       hermes
@@ -116,12 +116,14 @@
     // 企业
     if (/enterprise/.test(pathname)) return "enterprise-intake";
 
-    return "";
+    return "";  // 兜底：至少用 public 词库
   }
 
   // ==================== 初始化当前页面配置 ====================
   function buildPageConfig(pageType) {
-    if (!pageType || !I18N["zh-CN"]) return null;
+    // 即使页面类型未知，也加载 public 词库保证翻译不白屏
+    if (!I18N["zh-CN"]) return null;
+    var effectiveType = pageType || "_fallback";
 
     var zh = I18N["zh-CN"];
     var conf = I18N.conf || {};
@@ -609,6 +611,10 @@
           State.enableRegex = !State.enableRegex;
           saveConfig();
           doTranslate();
+          console.log(
+            "[mem0-chinese] 正则翻译: " +
+            (State.enableRegex ? "开启" : "关闭")
+          );
         }
       );
 
