@@ -49,6 +49,25 @@ var I18N = {
         "Home": "首页",
         "Dashboard": "仪表盘",
         "Notifications": "通知",
+        "Notifications alt+T": "通知 alt+T",
+        "Collapse sidebar": "收起侧栏",
+        "Docs": "文档",
+        "Upgrade": "升级",
+        "Playground": "演练场",
+        "SETUP": "设置",
+        "Install Mem0": "安装 Mem0",
+        "API Keys": "API 密钥",
+        "ACTIVITY": "活动",
+        "Request": "请求",
+        "Requests": "请求",
+        "Webhooks": "Webhooks",
+        "Memory Exports": "记忆导出",
+        "ACCOUNT": "账户",
+        "Usage & Billing": "用量与计费",
+        "Entities": "实体",
+        "View Breakdown": "查看分类",
+        "Select Organization": "选择组织",
+        "Select Project": "选择项目",
         "Settings": "设置",
         "Security": "安全",
         "Profile": "个人资料",
@@ -112,6 +131,7 @@ var I18N = {
 
         // -- 状态 --
         "Loading...": "加载中...",
+        "Loading data...": "加载数据中...",
         "Processing": "处理中",
         "Processing...": "处理中...",
         "Sending...": "发送中...",
@@ -175,6 +195,15 @@ var I18N = {
         "Close toast": "关闭通知",
         "Notification": "通知",
 
+        // -- 客服/聊天 --
+        "Intercom": "客服",
+        "Open Intercom Messenger": "打开客服消息",
+
+        // -- 计划/付费 --
+        "Get 3 months of Pro for free": "免费获取3个月专业版",
+        "Hobby plan usage": "爱好版用量",
+        "10K": "1万",
+
         // -- 对话框 --
         "Are you sure?": "确定吗？",
         "Yes": "是",
@@ -183,8 +212,13 @@ var I18N = {
       },
 
       "regexp": [
-        // 日期格式化
-        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\d{1,2}), (\d{4})$/, function (all, month, day, year) {
+        // 日期格式化 "DD Month" (e.g. "23 May")
+        [/^(\\d{1,2}) (January|February|March|April|May|June|July|August|September|October|November|December)$/, function (all, day, month) {
+          var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
+          return months[month] + "月" + day + "日";
+        }],
+        // 日期格式化 "Month DD, YYYY"
+        [/^(January|February|March|April|May|June|July|August|September|October|November|December) (\\d{1,2}), (\\d{4})$/, function (all, month, day, year) {
           var months = { January: "1", February: "2", March: "3", April: "4", May: "5", June: "6", July: "7", August: "8", September: "9", October: "10", November: "11", December: "12" };
           return year + "年" + months[month] + "月" + day + "日";
         }],
@@ -276,6 +310,19 @@ var I18N = {
         "Yesterday": "昨天",
         "Last 7 days": "最近7天",
         "Last 30 days": "最近30天",
+        "Pick a date range": "选择日期范围",
+        "All Time": "全部时间",
+        "30d": "30天",
+        "Total Memories": "总记忆数",
+        "Retrieval Events": "检索事件",
+        "Retrieval": "检索",
+        "Add Events": "添加事件",
+        "View Requests": "查看请求",
+        "No request activity for this range.": "此范围内无请求活动。",
+        "TOTAL REQUESTS": "总请求数",
+        "View Entities": "查看实体",
+        "No entity activity for this range.": "此范围内无实体活动。",
+        "TOTAL ENTITIES": "总实体数",
 
         // 记忆相关
         "Memory": "记忆",
@@ -354,6 +401,18 @@ var I18N = {
         "Invite role selected": "已选择邀请角色",
         "Invitation sent to": "邀请已发送至",
         "Jump straight to integration": "直接跳到集成",
+
+        // 探索/入门卡片
+        "Explore the Platform": "探索平台",
+        "Explore what mem0 can do": "探索 Mem0 的功能",
+        "Customize Mem0": "自定义 Mem0",
+        "Suggested": "推荐",
+        "Set what Mem0 remembers, how it's organized, and when it's used.": "设置 Mem0 记住什么、如何组织、何时使用。",
+        "Integration Examples": "集成示例",
+        "See real integration examples and patterns to add memory to your product.": "查看为产品添加记忆的真实集成示例与模式。",
+        "Try the Playground": "尝试演练场",
+        "Test memory addition and retrieval live before wiring it into your app.": "在接入应用前，实时测试记忆的添加与检索。",
+        "Step-by-step guides and references to integrate Mem0 into your stack.": "将 Mem0 集成到技术栈的分步指南与参考。",
       },
       "regexp": [],
       "selector": [],
