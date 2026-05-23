@@ -2,7 +2,7 @@
 // @name         mem0-chinese
 // @name:zh-CN   Mem0 中文本地化
 // @namespace    https://github.com/rendingGit/mem0-chinese
-// @version      1.0.7
+// @version      1.0.8
 // @description  Chinese localization for Mem0 (app.mem0.ai) — 为 Mem0 平台提供简体中文本地化
 // @description:zh-CN  为 Mem0 AI 记忆平台 (app.mem0.ai) 提供简体中文本地化汉化
 // @author       hermes
@@ -602,7 +602,7 @@
     try {
       // 切换正则翻译
       GM_registerMenuCommand(
-        (State.enableRegex ? "[✓] " : "[  ] ") + "启用正则翻译",
+        "启用正则翻译（开关）",
         function () {
           State.enableRegex = !State.enableRegex;
           saveConfig();
@@ -612,15 +612,27 @@
 
       // 切换未匹配词记录
       GM_registerMenuCommand(
-        (State.enableMissedTerms ? "[✓] " : "[  ] ") + "记录未匹配词汇",
+        "记录未匹配词汇（开关）",
         function () {
           State.enableMissedTerms = !State.enableMissedTerms;
           saveConfig();
           if (State.enableMissedTerms) {
             State.missedTerms = {};
           }
+          console.log(
+            "[mem0-chinese] 记录未匹配词汇: " +
+            (State.enableMissedTerms ? "开启 (缓存已清空)" : "关闭")
+          );
         }
       );
+
+      // 清空未匹配词汇缓存
+      GM_registerMenuCommand("清空未匹配词汇", function () {
+        var count = Object.keys(State.missedTerms).length;
+        State.missedTerms = {};
+        console.log("[mem0-chinese] 已清空 " + count + " 条未匹配词汇。");
+        alert("已清空 " + count + " 条缓存。");
+      });
 
       // 导出未匹配词汇
       GM_registerMenuCommand("导出未匹配词汇", function () {
